@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account – Palme</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, Arial, sans-serif;
+            background: #d2d4b0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: #211f2c;
+            padding: 2.5rem;
+            border-radius: 1.2rem;
+            box-shadow: 0 0 30px rgba(22, 7, 7, 0.4);
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: .3rem;
+            font-weight: 700;
+        }
+
+        .subtext {
+            color: #b8b8c9;
+            font-size: .9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a { color: #a48bff; text-decoration: none; }
+
+        .row {
+            display: flex;
+            gap: .8rem;
+        }
+
+        input {
+            width: 100%;
+            padding: .9rem;
+            border-radius: .6rem;
+            border: 1px solid #3a3850;
+            background: #2a2838;
+            color: #fff;
+            outline: none;
+            font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+
+        input:focus {
+            border-color: #a48bff;
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        .password-field i {
+            position: absolute;
+            right: 15px;
+            top: 13px;
+            cursor: pointer;
+            color: #b8b8c9;
+        }
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .85rem;
+            margin-bottom: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            background: #8c5bff;
+            border: none;
+            border-radius: .5rem;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            background: #7447e3;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.4rem 0;
+            color: #8d8c9a;
+            font-size: .9rem;
+            position: relative;
+        }
+
+        .divider:before,
+        .divider:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 40%;
+            height: 1px;
+            background: #3a3850;
+        }
+
+        .divider:before { left: 0; }
+        .divider:after { right: 0; }
+
+        .social-btns {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-btns button {
+            flex: 1;
+            background: transparent;
+            border: 1px solid #3a3850;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5rem;
+        }
+
+        .social-btns button:hover {
+            background: #2a2838;
+        }
+
+        .social-btns img {
+            width: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create an account</h2>
+        <p class="subtext">Already have an account? <a href="login.html">Log in</a></p>
+
+        <form id="registerForm">
+            
+            <div class="row">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+            </div>
+
+            <input type="email" placeholder="Email" required>
+
+            <div class="password-field">
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <i class="fa-solid fa-eye" id="togglePass"></i>
+            </div>
+
+            <label class="checkbox">
+                <input type="checkbox" required>
+                I agree to the <a href="#">Terms & Conditions</a>
+            </label>
+
+            <button type="submit">Create account</button>
+
+            <div class="divider">Or register with</div>
+
+            <div class="social-btns">
+                <button><img src="https://www.svgrepo.com/show/475656/google-color.svg"> Google</button>
+                <button><img src="https://www.svgrepo.com/show/303128/apple-black-logo.svg"> Apple</button>
+            </div>
+
+        </form>
+    </div>
+
+<script>
+    // Password visibility toggle
+    const pass = document.getElementById("password");
+    const toggle = document.getElementById("togglePass");
+
+    toggle.addEventListener("click", () => {
+        const type = pass.type === "password" ? "text" : "password";
+        pass.type = type;
+        toggle.classList.toggle("fa-eye-slash");
+    });
+</script>
+
+</body>
+</html>

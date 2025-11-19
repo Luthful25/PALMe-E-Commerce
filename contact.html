@@ -1,0 +1,177 @@
+<!-- FILE: contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Palme E-Commerce</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <script defer src="contact.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar flex between wrapper">
+      <a href="index.html" class="logo">Palme E-Commerce.</a>
+      <ul class="navlist flex gap-3">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="FAQs.html">FAQ's</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contacts.html" class="active">Contacts</a></li>
+      </ul>
+
+      <div class="desktop-action flex gap-2">
+        <a href="#" class="cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-value">0</span></a>
+        <a href="login.html" class="btn">Sign in <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+      </div>
+
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="FAQs.html">FAQ's</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="login.html" class="btn">Sign in <i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrapper p-top">
+    <section class="contact-header text-center">
+      <h2>Contact Us</h2>
+      <p class="para">Have questions or need support? Use our AI chat for fast answers or send a message below.</p>
+    </section>
+
+    <section class="contact-container flex gap-4">
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p class="para mt-one-half">You can reach us anytime through the following channels:</p>
+
+        <ul class="contact-list mt-one">
+          <li><i class="fa-solid fa-phone"></i> +880 1234 567 890</li>
+          <li><i class="fa-solid fa-envelope"></i> support@palme.example</li>
+          <li><i class="fa-solid fa-location-dot"></i> Palermo, Sicilia, Italy</li>
+        </ul>
+
+        <div class="social-links mt-one">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <form class="contact-form">
+        <h3>Send Us a Message</h3>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="Enter your name" required />
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@mail.com" required />
+        </div>
+
+        <div class="form-group">
+          <label>Your Message</label>
+          <textarea placeholder="Write your message here..." required></textarea>
+        </div>
+
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-tab">
+      <h3>Your Cart</h3>
+      <div class="cart-list"></div>
+
+      <div class="total-container">
+        <h4>Total:</h4>
+        <h4 class="cart-total">$0.00</h4>
+      </div>
+
+      <div class="btn-container flex gap-2">
+        <a href="#" class="btn close-btn">Close</a>
+        <a href="#" class="btn">Check out</a>
+      </div>
+    </div>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget" aria-hidden="false">
+      <button class="chat-toggle" aria-label="Open chat">💬</button>
+      <div class="chat-panel" role="dialog" aria-label="AI Chat">
+        <div class="chat-header">
+          <h4>Palme Assistant</h4>
+          <button class="chat-close" aria-label="Close chat">✕</button>
+        </div>
+        <div class="chat-body" role="log" aria-live="polite"></div>
+
+        <div class="chat-controls">
+          <select id="chat-mode" title="Mode">
+            <option value="local">Local FAQ (offline)</option>
+            <option value="remote">Remote API (server)</option>
+          </select>
+          <input id="chat-input" type="text" placeholder="Ask about our services, delivery, returns..." aria-label="Chat input">
+          <button id="chat-send" class="btn">Send</button>
+        </div>
+
+        <div class="chat-footer small">Tip: Local mode answers from canned FAQs. Use Remote mode after you implement a server endpoint <code>/api/chat</code>.</div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+        <div class="footer-container">
+            <div class="flex wrapper gap-4">
+                <div class="footer-wrapper">
+                    <a href="#" class="logo">Palme E-Commerce.</a>
+                    <p class="mt-one-half">
+                        Shop anytime, anywhere with fast delivery and <br>unbeatable prices on all your daily essentials.
+                    </p>
+                    <div class="flex gap-2 mt-one-half">
+                        <a href="" class="social-icon"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <ul class="footer-wrapper">
+                    <li><h4>Our Product</h4></li>
+                    <li class="mt-one-half"><a href="special.html" class="footer-link">Special</a></li>
+                    <li class="mt-one-half"><a href="popular.html" class="footer-link active">Popular</a></li>
+                    <li class="mt-one-half"><a href="product.html" class="footer-link">Category</a></li>
+                </ul>
+
+                <ul class="footer-wrapper">
+                    <li><h4>Our Company</h4></li>
+                    <li class="mt-one-half"><a href="" class="footer-link">Why Palme E-Commerce?</a></li>
+                    <li class="mt-one-half"><a href="" class="footer-link">Partner with us</a></li>
+                    <li class="mt-one-half"><a href="about.html" class="footer-link">About us</a></li>
+                    <li class="mt-one-half"><a href="faqs.html" class="footer-link">FAQ's</a></li>
+                </ul>
+
+                <ul class="footer-wrapper">
+                    <li><h4>Support</h4></li>
+                    <li class="mt-one-half"><a href="" class="footer-link">Account</a></li>
+                    <li class="mt-one-half"><a href="" class="footer-link">Support center</a></li>
+                    <li class="mt-one-half"><a href="" class="footer-link">Feedback</a></li>
+                    <li class="mt-one-half"><a href="contact.html" class="footer-link">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="text-center mt-4" style="color: gray; font-size: 0.95rem;">
+                © 2025 All Rights Reserved | Proudly made in PALMe GROUP SRLS by PALMe Tech
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+

@@ -1,0 +1,218 @@
+/* FILE: contact.css */
+.contact-header {
+    text-align: center;
+    padding: 1.5rem 1rem 1rem 1rem;/* Balanced spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-header h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-header .para {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Layout */
+.contact-container{
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-info,
+.contact-form{
+  flex: 1;
+  background: var(--pure-white);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  box-shadow: rgba(252, 245, 245, 0.05) 0px 6px 12px;
+}
+
+/* Contact Info List */
+.contact-info ul li{
+  margin: .75rem 0;
+  font-size: 1rem;
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+}
+
+/* Form */
+.form-group{
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea{
+  padding: .75rem;
+  border-radius: .75rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: .2s ease;
+}
+
+.form-group textarea{
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+  border-color: var(--gold-finger);
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.25);
+}
+
+/* Social Icons */
+.social-links a{
+  font-size: 1.5rem;
+  margin-right: .75rem;
+  color: var(--lead);
+  transition: .2s ease;
+}
+
+.social-links a:hover{
+  color: var(--gold-finger);
+}
+
+/* Responsive */
+@media(max-width: 760px){
+  .contact-container{
+    flex-direction: column;
+  }
+}
+
+/* --------------------------
+      AI CHAT WIDGET
+--------------------------- */
+
+.chat-widget{
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1200;
+}
+
+/* Toggle Button */
+.chat-toggle{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 100vw;
+  background: var(--gold-finger);
+  border: none;
+  box-shadow: rgba(0,0,0,0.1) 0 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  transition: transform .2s ease;
+}
+
+.chat-toggle:hover{
+  transform: scale(1.05);
+}
+
+/* Panel */
+.chat-panel{
+  width: 320px;
+  max-width: 90vw;
+  background: var(--pure-white);
+  border-radius: 1rem;
+  box-shadow: rgba(0,0,0,0.12) 0 12px 30px;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+}
+
+.chat-panel.active{
+  display: flex;
+}
+
+/* Header */
+.chat-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .75rem 1rem;
+  background: var(--gold-finger);
+  color: var(--pure-white);
+  font-weight: 600;
+}
+
+/* Messages */
+.chat-body{
+  padding: 1rem;
+  max-height: 320px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.chat-message{
+  padding: .6rem .8rem;
+  border-radius: .9rem;
+  max-width: 95%;
+  line-height: 1.2;
+}
+
+.chat-message.user{
+  align-self: flex-end;
+  background: var(--gold-finger);
+  color: var(--lead);
+}
+
+.chat-message.bot{
+  align-self: flex-start;
+  background: #f1f1f1;
+  color: #222222;
+}
+
+/* Controls */
+.chat-controls button {
+  padding: 0.3rem .5rem;
+  background: var(--gold-finger);
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  color: var(--lead);
+  font-weight: 400;
+  transition: background 0.2s ease;
+}
+
+.chat-controls button:hover {
+  background: #0e0d0d;
+  color: #ccc;
+}
+
+.chat-controls input{
+  flex: 1;
+  padding: .6rem .75rem;
+  border-radius: .6rem;
+  border: 1px solid #150e0e;
+  font-size: .95rem;
+}
+
+.chat-controls button{
+  padding: .6rem 1rem;
+  background: var(--gold-finger);
+  border: none;
+  border-radius: .6rem;
+  cursor: pointer;
+}
+
+/* Footer */
+.chat-footer{
+  font-size: .8rem;
+  color: #666;
+  padding: .5rem .75rem;
+  text-align: center;
+}

@@ -1,0 +1,247 @@
+<!-- FILE: about.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Palme E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+  <script defer src="about.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <header>
+    <nav class="navbar flex between wrapper">
+      <a href="index.html" class="logo">Palme E-Commerce.</a>
+      <ul class="navlist flex gap-3">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="FAQs.html">FAQ's</a></li>
+        <li><a href="about.html" class="active">About us</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+
+      <div class="desktop-action flex gap-2">
+        <a href="#" class="cart-icon"><i class="fa-solid fa-bag-shopping"></i><span class="cart-value">0</span></a>
+        <a href="login.html" class="btn">Sign in&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+        <a href="#" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+      </div>
+
+      <!-- mobile menu (same markup as index) -->
+      <ul class="mobile-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Product</a></li>
+        <li><a href="FAQs.html">FAQ's</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+        <li><a href="login.html" class="btn">Sign in&nbsp;<i class="fa-solid fa-arrow-right-from-bracket"></i></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="wrapper p-top">
+      <div class="hero-section flex gap-3">
+        <div class="content">
+          <h5>Who we are</h5>
+          <h2>Palme E-Commerce — <span>Delivering value, daily</span></h2>
+          <p class="para">Founded with a simple idea: make everyday essentials affordable and accessible. We combine
+            a curated product selection, fast local delivery and a friendly team to make shopping painless and joyful.</p>
+          <a href="product.html" class="btn">Know More</a>
+        </div>
+        <div class="image-container">
+          <img src="images/mobile-app.png" alt="about illustration">
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission / Vision -->
+    <section>
+      <div class="wrapper p-top text-center">
+        <div class="flex between">
+          <div style="flex:1; padding-right:2rem;">
+            <h3>Our Mission</h3>
+            <p class="para" style="max-width:600px; margin:auto;">To provide fast, reliable and affordable access to
+              daily essentials — supported by friendly customer service and a local network of partners.</p>
+          </div>
+          <div style="flex:1; padding-left:2rem;">
+            <h3>Our Vision</h3>
+            <p class="para" style="max-width:600px; margin:auto;">To become the most loved neighbourhood e-commerce brand,
+              enabling thousands of local households to save time and money.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats / quick facts -->
+    <section>
+      <div class="wrapper p-top text-center">
+        <div class="flex gap-3 between">
+          <div class="stat">
+            <h2 class="stat-number" data-target="12000">0</h2>
+            <p>Orders delivered</p>
+          </div>
+          <div class="stat">
+            <h2 class="stat-number" data-target="350">0</h2>
+            <p>Partner stores</p>
+          </div>
+          <div class="stat">
+            <h2 class="stat-number" data-target="99">0</h2>
+            <p>% Customer satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section>
+      <div class="wrapper p-top">
+        <div class="text-center">
+          <h5>Meet the team</h5>
+          <h2>People behind Palme</h2>
+        </div>
+
+        <div class="team-grid mt-4">
+          <div class="team-card">
+            <div class="profile"><img src="images/litu.jpg" alt="team member"></div>
+            <h4>Luthful Ikram Litu</h4>
+            <p class="small">Founder &amp; CEO</p>
+          </div>
+          <div class="team-card">
+            <div class="profile"><img src="images/team2.jpg" alt="team member"></div>
+            <h4>Manna Ahmed</h4>
+            <p class="small">Head of Operations</p>
+          </div>
+          <div class="team-card">
+            <div class="profile"><img src="images/team3.jpg" alt="team member"></div>
+            <h4>Raja Nipu</h4>
+            <p class="small">Head of Product</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="wrapper p-top text-center">
+        <h3>Want to join our journey?</h3>
+        <p class="para m-auto">We are hiring across operations, rider network and product. Send your CV to
+          <strong>careers@palme.example</strong></p>
+        <a href="contacts.html" class="btn mt-4">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Cart tab (copied from index to make cart UI available on this page) -->
+    <div class="cart-tab">
+      <h3>Your Cart</h3>
+      <div class="cart-list">
+        <!-- cart items injected by main script -->
+      </div>
+
+      <div class="total-container">
+        <h4>Total:</h4>
+        <h4 class="cart-total">$0.00</h4>
+      </div>
+
+      <div class="btn-container flex gap-2">
+        <a href="#" class="btn close-btn">Close</a>
+        <a href="#" class="btn">Check out</a>
+      </div>
+    </div>
+
+  </main>
+
+      <!---footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="flex wrapper gap-4">
+                <div class="footer-wrapper">
+                     <a href="#" class="logo">Palme E-Commerce.</a>
+                    <p class="mt-one-half">
+                        Shop anytime, anywhere with fast delivery and <br>unbeatable prices on all your daily essentials.
+                    </p>
+                    <div class="flex gap-2 mt-one-half">
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="" class="social-icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Our Product</h4>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="Special.html" class="footer-link">Special</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="popular.html" class="footer-link">Popular</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="product.html" class="footer-link">Category</a>
+                    </li>
+                </ul>
+
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Our Company</h4>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="" class="footer-link">Why Palme E-Commerce?</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="" class="footer-link">Patner with us</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="about.html" class="footer-link">About us</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="FAQs.html" class="footer-link">FAQ's</a>
+                    </li>
+                </ul>
+                <ul class="footer-wrapper">
+                    <li>
+                        <h4>Support</h4>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="" class="footer-link">Account</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="" class="footer-link">Support center</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="" class="footer-link">Feedback</a>
+                    </li>
+                    <li class="mt-one-half">
+                        <a href="contact.html" class="footer-link">Contacts</a>
+                    </li>
+                </ul>
+
+            </div>
+<!-- Copyright Line -->
+        <div class="text-center mt-4" style="color: gray; font-size: 0.95rem;">
+            © 2025 All Rights Reserved | Proudly made in PALMe GROUP SRLS by PALMe Tech
+        </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+

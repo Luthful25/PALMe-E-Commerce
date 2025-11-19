@@ -1,0 +1,33 @@
+/* FILE: about.css */
+/* small page-specific overrides and components for about.html */
+
+.team-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.team-card{
+  background: var(--pure-white);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  box-shadow: rgba(0,0,0,0.04) 0 6px 12px;
+  text-align: center;
+}
+.team-card .profile{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100vw;
+  overflow: hidden;
+  margin: 0 auto 0.75rem auto;
+}
+.team-card .small{ color: #6b6b6b; margin-top:.25rem; }
+
+.stat{ flex:1; }
+.stat-number{ font-size:2.4rem; color:var(--gold-finger); margin-bottom: .5rem; }
+
+/* make hero image smaller on narrow screens */
+@media screen and (max-width:780px){
+  .hero-section{ flex-direction: column-reverse; }
+  .app-container{ padding:1.5rem; }
+}
